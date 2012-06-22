@@ -1,0 +1,6 @@
+name: InfoButton
+main: net.roguedraco.infobutton.InfoButton
+version: 1.0
+commands:
+   ib:
+      description: General InfoButton Commands
