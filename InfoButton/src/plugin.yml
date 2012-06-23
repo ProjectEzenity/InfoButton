@@ -3,4 +3,5 @@ main: net.roguedraco.infobutton.InfoButton
 version: 1.0
 commands:
    ib:
+      usage: /ib
       description: General InfoButton Commands
