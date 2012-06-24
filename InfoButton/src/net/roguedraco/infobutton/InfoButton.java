@@ -23,7 +23,12 @@ public class InfoButton extends JavaPlugin {
 
 	public void onEnable() {
 		
-		new File(filepath+"infoBooks/").mkdirs();
+		try {
+			new File(filepath+"infoBooks/").mkdirs();
+		}
+		catch(Exception ex) {
+			
+		}
 		
 		log = Logger.getLogger("Minecraft");
 		InfoButton.main = this;
@@ -169,7 +174,7 @@ public class InfoButton extends JavaPlugin {
 					}
 				}
 				
-				if(hasRunCommand == true) {
+				if(hasRunCommand == false) {
 					// Show plugin help
 					player.sendMessage(ChatColor.AQUA+"============[ "+ChatColor.DARK_AQUA+"InfoButton" + ChatColor.AQUA+" ]============");
 					player.sendMessage(ChatColor.GRAY+"All commands relate to the InfoButton block that you are looking at (Except save)");
@@ -188,6 +193,7 @@ public class InfoButton extends JavaPlugin {
 					if(player.hasPermission("infobutton.save")) {
 						player.sendMessage(ChatColor.GREEN + "/ib save" + ChatColor.GRAY + "Saves the storage of all InfoButtons.");
 					}
+					return true;
 				}
 			}
 			return false;
@@ -198,7 +204,7 @@ public class InfoButton extends JavaPlugin {
 	}
 	
 	public static String convertColors(String str) {
-		Pattern color_codes = Pattern.compile("&([0-9A-Fa-fkK])");
+		Pattern color_codes = Pattern.compile("&([0-9A-Fa-fkKLlOoMmNn])");
 		Matcher find_colors = color_codes.matcher(str);
 		while (find_colors.find()) {
 		 str = find_colors.replaceFirst(new StringBuilder().append(ChatColor.COLOR_CHAR).append(find_colors.group(1)).toString());
