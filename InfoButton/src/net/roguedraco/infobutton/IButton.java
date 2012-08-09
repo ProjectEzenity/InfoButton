@@ -31,7 +31,6 @@ public class IButton implements Serializable {
 		this.y = location.getBlockY();
 		this.z = location.getBlockZ();
 		String key = world+":"+x+":"+y+":"+z;
-		System.out.println("IButton: "+key); // DEBUG
 		ButtonStorage.infoButtons.put(key, this);
 	}
 	

@@ -176,22 +176,22 @@ public class InfoButton extends JavaPlugin {
 				
 				if(hasRunCommand == false) {
 					// Show plugin help
-					player.sendMessage(ChatColor.AQUA+"============[ "+ChatColor.DARK_AQUA+"InfoButton" + ChatColor.AQUA+" ]============");
+					player.sendMessage(ChatColor.AQUA+"====================[ "+ChatColor.DARK_AQUA+"InfoButton" + ChatColor.AQUA+" ]====================");
 					player.sendMessage(ChatColor.GRAY+"All commands relate to the InfoButton block that you are looking at (Except save)");
 					if(player.hasPermission("infobutton.create")) {
-						player.sendMessage(ChatColor.GREEN + "/ib create" + ChatColor.GRAY + "Creates an InfoButton.");
+						player.sendMessage(ChatColor.GREEN + "/ib create" + ChatColor.GRAY + " Creates an InfoButton.");
 					}
 					if(player.hasPermission("infobutton.create.command")) {
-						player.sendMessage(ChatColor.GREEN + "/ib command <Command> <Arg1>..." + ChatColor.GRAY + "Changes the InfoButton to run a command.");
+						player.sendMessage(ChatColor.GREEN + "/ib command <Command> <Arg1>..." + ChatColor.GRAY + " Changes the InfoButton to run a command.");
 					}
 					if(player.hasPermission("infobutton.create.file")) {
-						player.sendMessage(ChatColor.GREEN + "/ib file <Filename>" + ChatColor.GRAY + "Changes the InfoButton to read a file.");
+						player.sendMessage(ChatColor.GREEN + "/ib file <Filename>" + ChatColor.GRAY + " Changes the InfoButton to read a file.");
 					}
 					if(player.hasPermission("infobutton.delete")) {
-						player.sendMessage(ChatColor.GREEN + "/ib delete" + ChatColor.GRAY + "Deletes the InfoButton.");
+						player.sendMessage(ChatColor.GREEN + "/ib delete" + ChatColor.GRAY + " Deletes the InfoButton.");
 					}
 					if(player.hasPermission("infobutton.save")) {
-						player.sendMessage(ChatColor.GREEN + "/ib save" + ChatColor.GRAY + "Saves the storage of all InfoButtons.");
+						player.sendMessage(ChatColor.GREEN + "/ib save" + ChatColor.GRAY + " Saves the storage of all InfoButtons.");
 					}
 					return true;
 				}
